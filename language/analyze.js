@@ -165,7 +165,7 @@ if (require.main === module) {
                 'Usage: node analyze.js <sentiment|entities|syntax> <text>');
     process.exit(1);
   }
-  exports.main(args[0], args[1], function (result) {
+  exports.main(args[0], args[1], function (err, result) {
     console.log(JSON.stringify(result, null, '  '));
   });
 }
