@@ -166,6 +166,9 @@ if (require.main === module) {
     process.exit(1);
   }
   exports.main(args[0], args[1], function (result) {
+    if (err) {
+      console.error(err);
+    }
     console.log(JSON.stringify(result, null, '  '));
   });
 }
